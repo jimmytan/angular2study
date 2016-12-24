@@ -1,25 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Angular QuickStart</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <title>ng-book 2: Inventory App</title>
+  <link rel="icon" type="image/png" href="resources/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="resources/images/favicon.ico" />
+  <!-- Libraries -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+<!-- Configure System.js, our module loader -->
+<script src="systemjs.config.js"></script>
+<script>
+  System.import('app')
+          .then(null, console.error.bind(console));
+</script>
 
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
-  </head>
+<!-- Menu Bar -->
+<div class="ui menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      <img class="logo" src="resources/images/ng-book-2-minibook.png">
+      ng-book 2
+    </a>
+    <div class="header item borderless">
+      <h1 class="ui header">
+        Angular 2 Inventory App
+      </h1>
+    </div>
+  </div>
+</div>
 
-  <body>
-    <my-app>Loading AppComponent content here ...</my-app>
-  </body>
+<div class="ui main text container">
+  <inventory-app></inventory-app> <!-- <--- Our app loads here! -->
+</div>
+
+</body>
 </html>
