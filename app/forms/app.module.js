@@ -13,16 +13,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_main_component_1 = require("./app.main.component");
 var forms_1 = require("@angular/forms");
+var app_formbuilder_component_1 = require("./app.formbuilder.component");
 var FormsDemoAppModule = (function () {
     function FormsDemoAppModule() {
     }
     FormsDemoAppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-            declarations: [app_main_component_1.DemoFormSku],
-            bootstrap: [app_main_component_1.DemoFormSku]
+            declarations: [app_formbuilder_component_1.FormSkuBuilder],
+            bootstrap: [app_formbuilder_component_1.FormSkuBuilder]
         }), 
         __metadata('design:paramtypes', [])
     ], FormsDemoAppModule);
