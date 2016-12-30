@@ -1,3 +1,6 @@
+/**
+ * Created by wenjuntan on 2016-12-29.
+ */
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8,24 +11,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./inventory/app.component');
-var app_productImage_component_1 = require('./inventory/app.productImage.component');
-var app_productRow_component_1 = require("./inventory/app.productRow.component");
-var app_productDepartment_component_1 = require("./inventory/app.productDepartment.component");
-var AppModule = (function () {
-    function AppModule() {
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var app_main_component_1 = require("./app.main.component");
+var forms_1 = require("@angular/forms");
+var FormsDemoAppModule = (function () {
+    function FormsDemoAppModule() {
     }
-    AppModule = __decorate([
+    FormsDemoAppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.InventoryApp, app_productImage_component_1.ProductImage, app_productRow_component_1.ProductRow, app_productDepartment_component_1.ProductDepartment],
-            bootstrap: [app_component_1.InventoryApp]
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+            declarations: [app_main_component_1.DemoFormSku],
+            bootstrap: [app_main_component_1.DemoFormSku]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], FormsDemoAppModule);
+    return FormsDemoAppModule;
 }());
-exports.AppModule = AppModule;
+exports.FormsDemoAppModule = FormsDemoAppModule;
 //# sourceMappingURL=app.module.js.map
